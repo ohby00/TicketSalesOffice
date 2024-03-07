@@ -3,9 +3,9 @@ package com.example.user.policy;
 import com.example.user.user.UserLevel;
 import com.example.user.user.User;
 
-public class LevelPolicyImpl implements LevelPolicy{
+public class FixLevelPolicy implements LevelPolicy{
 
-    private int discountTicket = 500;
+    private int discountTicket = 1000;
 
     @Override
     public int discountTicket(User user, int discount) {

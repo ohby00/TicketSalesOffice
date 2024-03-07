@@ -1,17 +1,19 @@
 package com.example.user.service;
 
 import com.example.user.policy.LevelPolicy;
-import com.example.user.policy.LevelPolicyImpl;
-import com.example.user.repository.MemoryUserRepository;
 import com.example.user.repository.UserRepository;
 import com.example.user.user.Order;
 import com.example.user.user.User;
-import com.example.user.user.UserLevel;
 
 public class OrderServiceImpl implements OrderService{
 
-    private final UserRepository userRepository = new MemoryUserRepository();
-    private final LevelPolicy levelPolicy = new LevelPolicyImpl();
+    private final UserRepository userRepository;
+    private final LevelPolicy levelPolicy;
+
+    public OrderServiceImpl(UserRepository userRepository, LevelPolicy levelPolicy) {
+        this.userRepository = userRepository;
+        this.levelPolicy = levelPolicy;
+    }
 
     @Override
     public Order newOrder(Long userId, String ticketName, int ticketPrice) {
