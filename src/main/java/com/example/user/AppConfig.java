@@ -21,7 +21,7 @@ public class AppConfig {
     }
 
     @Bean
-    public OrderService orderService() {
+    public OrderService  orderService() {
         return new OrderServiceImpl(userRepository(), levelPolicy());
     }
 
