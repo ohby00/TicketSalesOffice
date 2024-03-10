@@ -22,5 +22,6 @@ public class OrderApp {
         Order order = orderService.newOrder(userId, "ticket", 10000);
         System.out.println("order = " + order);
         System.out.println(order.transactionTicket());
+
     }
 }

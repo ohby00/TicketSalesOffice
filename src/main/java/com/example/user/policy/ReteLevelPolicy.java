@@ -2,7 +2,9 @@ package com.example.user.policy;
 
 import com.example.user.user.User;
 import com.example.user.user.UserLevel;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ReteLevelPolicy implements LevelPolicy {
 
     private int discountTicket = 5;

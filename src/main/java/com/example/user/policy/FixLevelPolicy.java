@@ -2,6 +2,8 @@ package com.example.user.policy;
 
 import com.example.user.user.UserLevel;
 import com.example.user.user.User;
+import org.springframework.stereotype.Component;
+
 
 public class FixLevelPolicy implements LevelPolicy{
 
